@@ -22,10 +22,25 @@ body {
 
 body {
   min-height: 100vh;
+  background-image: url('./images/bg-pattern-top-desktop.svg'),
+    url('./images/bg-pattern-bottom-desktop.svg');
+  background-position: left top, bottom right;
+  background-repeat: no-repeat;
+  background-color: var(--white);
 }
 
 p {
   font-size: var(--base-size);
+}
+
+.attribution {
+  margin-top: 5rem;
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
 }
 
 .container {
@@ -188,6 +203,13 @@ p {
 }
 
 @media (min-width:320px) {
+  body {
+    background-image: url('./images/bg-pattern-top-mobile.svg'),
+      url('./images/bg-pattern-bottom-mobile.svg');
+    background-position: left top, bottom right;
+    background-repeat: no-repeat;
+  }
+
   .container {
     padding: 1.35rem;
   }
@@ -280,8 +302,6 @@ p {
 
   .cards-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
     grid-template:
       "card1 card2"
       "card3 card3"
@@ -333,6 +353,13 @@ p {
 }
 
 @media (min-width:1025px) {
+  body {
+    background-image: url('./images/bg-pattern-top-desktop.svg'),
+      url('./images/bg-pattern-bottom-desktop.svg');
+    background-position: left top, bottom right;
+    background-repeat: no-repeat;
+  }
+
   .main-container {
     grid-template-columns: 1fr 1fr;
     column-gap: 2rem;
@@ -357,24 +384,23 @@ p {
 
   .cards-container {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
     grid-template:
       "card1 card2 card3"
     ;
     margin-top: 4rem;
   }
 
-
   .card:nth-child(1) {
     grid-area: card1;
   }
 
   .card:nth-child(2) {
+    margin-top: 1.25rem;
     grid-area: card2;
   }
 
   .card:nth-child(3) {
+    margin-top: 2.5rem;
     grid-area: card3;
   }
 
